@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            height: 100px;
+            align-items: center;
+            
+        }
+        .headerbox1 {
+            font-size: 50px;
+            background-color: yellow;
+        }
+        .headerbox2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        
+        .menu1 {
+            background-color: yellow;
+            display: flex;
+        }
+        .menu2 {
+            background-color: orange;
+            display: flex;
+        }
+        .blank {
+            background-color: gray;
+        }
+        .main_article {
+            background-color: bisque;
+            font-size: 25px;
+            width: 500px;
+            flex-shrink: 0;
+        }
+
+        .section {
+            display: flex;
+        }
+        .right_aside {
+            font-size: 25px;
+            /* flex-grow: 1; */
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="headerbox1">WEB-logo</div>
+        <div class="headerbox2">
+            <div class="menu1">
+                <p>menu</p>
+                <p>menu</p>
+                <p>menu</p>
+                <p>menu</p>
+            </div>
+            
+            <div class="menu2">
+                <p>menu</p>
+                <p>menu</p>
+                <p>menu</p>
+                <p>menu</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="section">
+        <main class="main">
+            <article>
+               <p class="main_article">Main Article</p> 
+                Lorem ipsum dolor sit amet cicing elit. Maxime voluptate natus beatae fuga, a sunt inventore consequatur vel eaque porro perspiciatis. Dicta quibusdam voluptas quidem debitis
+            </article>
+            <article>
+                <p class="main_article">Main Article</p> 
+                Lorem ipsum dolor sit amet cicing elit. Maxime voluptate natus beatae fuga, a sunt inventore consequatur vel eaque porro perspiciatis. Dicta quibusdam voluptas quidem debitis
+            </article>
+
+            <article>
+                <p class="main_article">Main Article</p> 
+                Lorem ipsum dolor sit amet cicing elit. Maxime voluptate natus beatae fuga, a sunt inventore consequatur vel eaque porro perspiciatis. Dicta quibusdam voluptas quidem debitis
+            </article>
+        </main>
+        <aside class="aside">
+            <p class="right_aside">Right aside</p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto dolores sunt aliquam ea cupiditate non numquam dicta, hic, quas itaque ipsam mollitia reprehenderit labore illum, facilis eveniet explicabo eum consequatur.
+        </aside>
+    </section>    
+    <footer></footer>
+</body>
+</html>
