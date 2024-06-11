@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        header {
+            display: flex;
+            justify-content: space-between;
+            
+            width: 1000px;
+            border: 1px solid #222;
+            height: 100px;
+
+            margin: 0 auto;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        
+        h1 {
+            width: 200px;
+            background-color: yellow;
+            font-size: 24px;
+            font-weight: bold;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;            
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* menu가 위아래로 찢어짐 */
+            background-color: antiquewhite;
+        }
+        .menu-container {
+            background-color: yellow;
+            display: flex;
+        }
+        .menu-container:last-child{
+            background-color: orange;
+            /* menu-container의 마지막 텍스트에 오렌지색 */
+        }
+        .menu-content > a {
+            display: block;
+            text-decoration: none;
+            color: #222;
+
+            padding: 8px 24px;
+            /* 아래 5개를 padding하나로 압축 가로, 세로순서 */
+            /* width: 80px;
+            height: 40p
+            display: flex;
+            justify-content: center;
+            align-items: center; */            
+        }
+
+
+    /* ---------------------- */
+        .wrap {
+            width: 1000px;
+            display: flex;
+            gap: 10px;
+            margin: 0 auto;
+            margin-bottom: 10px;
+
+            align-items: flex-start;
+            /* flex 정렬 때문에 aside가 article사이즈와 같은 크기로 높이가 커짐.(기본속성)
+              따라서 flex-start를 사용해서 컨텐츠 만큼 크기를 가질 수 있도록하기 */
+        }
+
+        article {
+            border: 1px solid #222;
+            margin-bottom: 10px;
+            padding: 20px;
+        }
+        article > p {
+            line-height: 25px;
+        }
+
+        article > h2 {
+            background-color: antiquewhite;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 2px;
+            margin-bottom: 3px;
+        }
+
+        aside {
+            border: 1px solid #222;
+            padding: 15px;
+            line-height: 28px;
+            flex-shrink: 0;
+            width: 300px;
+            /* article의 크기 때문에 넓이지정을 해도 정확하게 적용이 안됨. flex-shrink 사용하기 */
+        }
+        
+        button {
+            margin-bottom: 10px;
+        }
+        aside > h2 {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .menu-container {
+            display: flex;
+    
+        }
+
+        .aside-inner-box {
+            background-color: gray;
+            padding: 5px;
+        }
+        .aside-inner-box > h3 {
+            font-weight: bold;
+            font-size: 18px;
+        }
+        .aside-inner-box > p {
+            font-size: 13px;
+        }
+
+    /* --------------------- */
+        footer {
+            width: 1000px;
+            border: 2px solid #222;
+            background-color: antiquewhite;
+            margin: 0 auto;
+
+            text-align: center;
+            padding: 12px;
+            box-sizing: border-box;
+        }
+
+    </style>
+
+</head>
+<body>
+<header>
+    <h1>WEB-log</h1>
+    <nav>
+        <ul class="menu-container">
+            <li class="menu-content"><a href="">menu</a></li>
+            <li class="menu-content"><a href="">menu</a></li>
+            <li class="menu-content"><a href="">menu</a></li>
+            <li class="menu-content"><a href="">menu</a></li>
+            <!-- 클릭영역 넓히기 위해 (ul이 아닌)a 태그를 늘리기 -->
+        </ul>
+        <ul class="menu-container">
+            <li class="menu-content"><a href="">menu</a></li>
+            <li class="menu-content"><a href="">menu</a></li>
+            <li class="menu-content"><a href="">menu</a></li>
+            <li class="menu-content"><a href="">menu</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="wrap">
+    <main>
+        <article>
+            <h2>Main Article</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex aliquam ipsam totam, error explicabo numquam porro adipisci beatae ad vel, hic deleniti omnis neque. At ullam animi fugiat repellendus cum?</p>
+        </article>
+        <article>
+            <h2>Main Article</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex aliquam ipsam totam, error explicabo numquam porro adipisci beatae ad vel, hic deleniti omnis neque. At ullam animi fugiat repellendus cum?</p>
+        </article>
+        <article>
+            <h2>Main Article</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex aliquam ipsam totam, error explicabo numquam porro adipisci beatae ad vel, hic deleniti omnis neque. At ullam animi fugiat repellendus cum?</p>
+        </article>
+        <article>
+            <h2>Main Article</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex aliquam ipsam totam, error explicabo numquam porro adipisci beatae ad vel, hic deleniti omnis neque. At ullam animi fugiat repellendus cum?</p>
+        </article>
+    </main>
+    <aside>
+        <h2>Right aside</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui hic magni debitis excepturi id vitae distinctio corporis, veritatis tenetur repellat. Necessitatibus.</p>
+        <input type="text" name="" id="">
+        <button>mailto</button>
+        <div class="aside-inner-box">
+            <h3>TEXT</h3>
+            <p>banner</p>
+        </div>
+    </aside>
+</div>
+<footer>
+    &copy;HTML5 COPYRIGHT
+</footer>
+</body>
+</html>
