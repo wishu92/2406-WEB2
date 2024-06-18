@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        header {
+            height: 80px;
+            background-color: coral;
+            padding: 0 32px;
+
+            /* fixed하면 넓이값이 무시되어 width값을 입력해야함. */
+            /* width 100% 하면 내부 컨텐츠 사이즈 지키기위해 border-box */
+            box-sizing: border-box;
+            width: 100%;
+            /* 브라우저 기준으로 top에 정렬됨 */
+            position: fixed;
+            top: 0;
+        }
+
+        body {
+            height: 5000px;
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 100%;
+        }
+
+        nav {
+            background-color: gray;
+            height: 16px;
+            width: 800px;
+        }
+
+        .icons {
+            background-color: gray;
+            height: 48px;
+            width: 200px;
+        }
+        .container {
+            /* header fixed 때문에 윗부분이 가려지므로 padding을 통해 헤더영역 여백만들어주기 */
+            /* margin-top은 구조가 복잡하면 문제가 생길 위험이 있다. */
+            padding-top: 80px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>logo</h1>
+            <nav>
+
+            </nav>
+            <div class="icons">
+
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore assumenda earum modi quidem nihil maxime magni ut, illo debitis culpa fuga enim voluptas dicta? Ipsa beatae magni rerum cumque esse.
+    </div>
+</body>
+</html>
