@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .box {
+            width: 200px;
+            height: 200px;
+            border: 1px solid #222;
+            background-color: pink;
+
+            font-size: 24px;
+            font-weight: bold;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: absolute;
+            opacity: 0.8;
+        }
+
+        .origin {
+            background-color: #22222280;
+        }
+
+        /* 
+
+        position 속성과 어떻게 다른가?
+
+        1. 중점
+        - position의 left 100%과 같은 값은 정렬을 개체에 지정하지만 중점은 (부모)컨테이너다.
+        - transform 속성은 자신이 중심이기때문에, 
+          tranlateX(100%)는 x크기만큼 자기자리에서 오른쪽으로 이동한다.
+        */
+        .trans {
+            /* translate :이동시키는 속성,함수 */
+            /* 
+            translate : (x , y)축 이동 (px,%)
+            translateX : x축 이동
+            translateY : y축 이동
+            translateZ : z축 이동
+            translate3D : (x, y, Z)이동
+             */
+            transform: translate(100%, 100%);
+
+            /* 
+            scale : 크기를 변화시키는 속성 
+            scale(비율) : 1:1비율로 변형 (2)=(200%)
+            scale(x비율,y비율) : 자유 변형
+            scaleX(비율) : x축 비율 변형
+            scaleY(비율) : y축 비율 변형
+            scaleZ(비율) : z축 비율 변형
+            scale3D(비율,비율,비율) : 3d 비율 변형
+
+            width & height는 크기만 변경시키는 것
+            scale은 자기를 중심으로 변형되는 것, 원래크기를 가지려고함. 해당 컨텐츠를 전체적으로 크기변경시킴
+            wh VS scale.html 차이점 참고하기
+            */
+            transform: scale(200%);
+
+            /* 
+            skew : 기울이기
+            skewx : 컨텐츠 중앙의 가로선을 기준으로 위,아래 반대로 기울어짐
+            잘안씀
+            */
+            transform: skewx(10deg) skewY(10deg);;
+
+            /* 
+            rotate : 회전 
+            rotate (각도=deg)
+            ...x,y,z,3d..등
+            */
+            transform: rotate(45deg);
+
+        
+            /* transform속성은 애니매이션과 같이 자주 쓰임 */
+
+            /* transform의 기준점, 기본값(center,center) 컨텐츠의 중앙부, 압정을 꽂았다고 생각하기 */
+            /* transform-origin: top left; */
+            transform: rotate(45deg);
+            transform-origin: 150% 
+            /* origin은 축을 밖에 둘수도 있음. (px,%,top....)
+            x축에 150%지점에 압정, 줄에 달아서 시계방향으로 돌리는 느낌 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box origin">
+        원래 위치
+    </div>
+    <div class="box trans">
+        BOX
+    </div>
+</body>
+</html>
