@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: cadetblue;
+
+            /* property:속성, 한 애니메이션 안에서 다른 서로 속성을 적용할 때 */
+            /* ex. transition-property: width; - width에만 아래 속성들 적용.*/
+            /* 아래 속성들을 width, height로 나누어서 적용함, transition들 중 맨위에 작성*/
+            transition-property: width, height;
+
+            /* transition: 0.5s; = duration, timing-ease, property-all기본값, 
+            duration:지속시간 */
+            transition-duration: 1s, 0.5s;
+            /* 트랜지션 재생 시 가속도 함수, timing차트시트 검색해서 정보 받아서 사용할 수 있음.  */
+            transition-timing-function: ease, linear;
+            /* 트랜지션 재생 전 대기시간 */
+            transition-delay: 0s, 0.5s;
+            
+            /* height 지정이 없으면 기본값이 auto임. 
+            auto상태에서 transition으로 height수치 적용하면 작동안함. display, flex-block이런거는 작동안함 */
+        }
+
+        .box:hover {
+            width: 300px;
+            height: 300px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

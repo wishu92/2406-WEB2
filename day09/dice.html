@@ -35,10 +35,13 @@
             box-sizing: border-box;
             border: 1px solid #222;
             display: flex;
+
+            /* 점 정렬하는거 */
             flex-direction: column;
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
+
             column-gap: 31px;
             row-gap: 10px;
             border-radius: 10px;
@@ -87,7 +90,8 @@
         }
 
         .abs-eye {
-            position: absolute;
+            /* 자리위치 위해 없으면 정렬이 되어버림 */
+            position: absolute; 
         }
 
         .left {
