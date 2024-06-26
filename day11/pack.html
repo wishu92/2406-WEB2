@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        body {
+            background-color: black;
+        }
+        .pack {
+            width: 100px;
+            height: 100px;
+        }
+
+        .m {
+            /* 웬만하면 직접 크기 지정하기 보단, pack에 지정하고 m은 width100%하기 */
+            display: block;
+            width: 100%;
+            height: 50px;
+            background-color: white;
+
+        }
+
+            
+        .top-m {
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            transform-origin: bottom;
+           
+            animation-name: bite-top;
+            animation-duration: 0.3s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-timing-function: linear;
+            /* animation: bite-top 0.3s infinite alternate; */
+            
+        }
+        .bot-m {
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            transform-origin: top;
+
+            animation: bite-bottom infinite alternate linear 0.3s;
+            
+        }
+
+        @keyframes bite-top {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(30deg);
+            }
+        }
+        @keyframes bite-bottom {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(-30deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="pack">
+        <span class="m top-m"></span>
+        <span class="m bot-m"></span>
+    </div>
+</body>
+</html>
