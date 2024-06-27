@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        .container {
+            width: 400px;
+            height: 400px;
+            background-color: black;
+            position: relative;
+        }
+        .animaion-container {
+            
+            position: absolute;
+            width: 40px;
+           /* 굳이 높이값을 지정하기 보다 비율로! */
+            aspect-ratio: 1;
+
+            /* container에 display-flex를 주면 뒤의 배경의 컨텐츠도 정렬이 되므로 */
+            /* roading아이콘만 가운데 정렬이 필요한 경우 아래처럼 */
+            top: 50%;
+            left: 50%;
+            /* x방향으로 -50% y방향으로 -50%하면 중앙으로 이동 */
+            transform: translate(-50%,-50%);
+
+        }
+        .roading {
+            width: 100%;
+            height: 100%;
+            border: 8px solid white;
+            border-top-color: red;
+            
+            /* ***** */
+            box-sizing: border-box;
+
+            border-radius: 50%;
+            animation: roading infinite linear 1s;
+        }
+
+        @keyframes roading {
+
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="animaion-container">
+            <div class="roading"></div>
+        </div>
+    </div>
+</body>
+</html>
