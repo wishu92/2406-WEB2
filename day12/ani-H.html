@@ -18,10 +18,10 @@
         }
         .animation-container {
             position: absolute;
-            width: 250px;
-            height: 300px;
+            width: 280px;
+            aspect-ratio: 1;
 
-            top: 10%;
+            top: 15%;
             left: 15%;
 
             display: flex;
@@ -34,14 +34,13 @@
             height: 100%;
             background-color: red;
             transform-origin: top;
-            
+    
         }
         .box:nth-child(1) {
             animation: animation-v 4s alternate infinite;         
         }
         .box:nth-child(2) {
-            height: 20%;
-            background-color: red;
+            height: 25%;
     
             transform-origin: left;
             animation: animation-h 4s alternate infinite;
@@ -105,10 +104,10 @@
             height: 60px;
 
             top: 50%;
-            left:50%;
-            transform: translate(-25%,150%);
-
+            left: 50%;
+            transform: translate(-25%,100%);
         }
+
         .click {
             position: absolute;
 
