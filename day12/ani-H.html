@@ -48,17 +48,16 @@
         .box:nth-child(3) {
             animation: animation-v2 4s alternate infinite;
         }
-        .box:nth-child(4) {
-            visibility: hidden;
-        }
 
         
         @keyframes animation-v {
             from {  
                transform: scale(1,0);
+               /* transform: scaleY(0); */
             }
             25% {
                 transform: scale(1,1);
+                /* transform: scaleY(1); */
             }
             to {               
                 transform: scale(1,1);   
@@ -115,27 +114,36 @@
             height: 50%;
             border-radius: 30px;
             border: 2px solid white;
+            box-sizing: border-box;
 
             animation: animation-click 2s infinite;
+            
         }
         .dot {
             position: absolute;
 
-            margin: 5px;
-            width: 10px;
-            height: 10px;
+            /* margin: 5px; */
+            left: 25%;
+            /* 모박스도 %라서 ... */
+            top: 25%;
+            transform: translate(-50%,-50%);
+
+            width: 8px;
+            height: 8px;
             border-radius: 50%;
-            box-sizing: border-box;
+          
             background-color: white;
          
             animation: animation-click 2s infinite;
+            /* click에도 opacity가 들어가있어서 중첩됨. 
+            따라서 애니메이션을 하나 더 만들어서 따로 주어야함. dot에는 opacity없이.*/
         }
 
 
         @keyframes animation-click {
             from {
                 transform: translateY(0);
-                opacity: 1;
+            
             }
             50% {
                 transform: translateY(100%);
@@ -154,7 +162,6 @@
 <body>
     <div class="container">
         <div class="animation-container">
-                <div class="box"></div>
                 <div class="box"></div>
                 <div class="box"></div>
                 <div class="box"></div>
