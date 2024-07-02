@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .반응형박스 {
+            width: 100%;
+            height: 50vh;
+            background-color: aqua;
+
+            /* 
+            1366~ : pc
+            768~1365 : 태블릿 
+            ~767 : 모바일
+
+
+        PC퍼스트 
+            기본작성 : pc
+
+            @media screen and (max-width:1365) {
+                태블릿
+            }
+            @media screen and (max-width:767) {
+                모바일
+            }
+            (pc기준으로 작성되어 최대1365px 보다 작으면 태블릿, 
+            그 중 최대767px 보다 작으면 모바일.
+            아래 있을수록 우선순위) 
+
+
+
+
+        모바일퍼스트 (모바일기준으로 작성하는 경우)
+
+            기본작성 : mobile
+            @media screen and (min-width:768) {
+                태블릿
+            }
+            @media screen and (min-width:1366) {
+                PC
+            }
+            (모바일 기준. 최소768보다 크면 태블릿으로, 최소1366보다 크면 pc로)
+            */
+            
+        }
+        @media  screen and (max-width:800px) and (min-width:750px){
+            .반응형박스 {
+                background-color: rebeccapurple;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="반응형박스"></div>
+    
+</body>
+</html>
