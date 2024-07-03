@@ -7,11 +7,13 @@
     <link rel="stylesheet" href="../reset.css">
     <style>
         header {
-            background-color: rgb(239, 251, 251);
+            padding: 0 32px;
         }
 
         .header-page {
-            width: 100%;
+            max-width: 1280px;
+
+            background-color: rgb(247, 251, 251);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -48,7 +50,6 @@
             padding: 10px;
             border-radius: 3px;
             box-sizing:border-box;
-
             
             text-align: center;
             
@@ -61,16 +62,17 @@
         }
 
         #intro {
-            background-color: rgb(239, 251, 251);
-            padding: 64px;
+            padding: 0 32px;
         }
-
+        
         .intro-container {
-            width: 100%;
+            max-width: 1280px;
+            height: 800px;
             margin: 0 auto;
-
+            
+            background-color: rgb(247, 251, 251);
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
 
             padding: 0 32px;
@@ -78,18 +80,17 @@
         }
         .intro-image {
             width: 100%;
-            height: 400px;
+
         }
 
         .intro-image > img {
             display: block;
             width: 100%;
-
         }
 
         .login-contents {
             width: 100%;
-            height: 400px;
+            padding: 32px;
         }
 
         .login-contents > h2 {
@@ -139,30 +140,110 @@
             font-weight: bold;
         }
 
+
         #main-page {
-            width: 100%;
-            flex-shrink: 0;
+            padding: 0 32px;
         }
 
         .main-explain {
+            max-width: 1280px;
+            height: 600px;
+            margin: 0 auto;
+
             display: flex;
             justify-content: center;
             align-items: center;
-
             position: relative;
+
         }
-        .main-explain > figure {
+        .main-explain figure {
             width: 100%;
+            height: 100%;
+            flex-shrink: 0;
         }
+
         .main-image {
             display: block;
+            height: 100%;
+            object-fit: cover;
+            
         }
 
         .main-text {
             position: absolute;
+
         }
         
+        .main-text > h3 {
+            font-size: 32px;
+            color: white;
+            margin-bottom: 32px;
+        }
+        .main-text-subtitie {
+            font-size: 15px;
+            color: white;
+            line-height: 25px;
+        }
 
+        #main-bottom-page {
+            padding: 0 32px;
+
+        }
+
+        .bottom-container {
+            max-width: 1280px;
+            height: 300px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .main-sub-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .main-sub-box > figure {
+            width: 100%;
+        }
+        .main-sub-image {
+            display: block;
+            width: 100%;
+            margin-bottom: 12px;
+        }
+        .main-sub-box > h4 {
+            font-size: 20px;
+            color: #444;
+            margin-bottom: 12px;
+        }
+        .main-sub-box > p {
+            font-size: 12px;
+            color: #666;
+            line-height: 18px;
+           
+        }
+        #recommend-page {
+            padding: 0 32px;
+        }
+        .recommend-container {
+            max-width: 1280px;
+            margin: 0 auto;
+
+            display: flex;
+            flex-direction: column;
+            background-color: grey;
+            
+        }
+        .top-text {
+            display: flex;
+            justify-content: space-between;
+        }
+        .top-text > h4 {
+            font-size: 20px;
+        }
+        .top-text > a {
+            text-decoration: none;
+            font-size: 10px;
+        }
     </style>
 </head>
 <body>
@@ -204,12 +285,12 @@
 
         <main id="main-page">     
             <div class="main-explain">       
-                <figure >
+                <figure>
                     <img class="main-image" src="../image/회의외국인.jpg" alt="meeting">
                 </figure>
                 <div class="main-text">
                     <h3>모임을 위한 공간,밴드</h3>
-                    <p class="main-text-subtitie">밴드는 그룹멤버와 함께 하는 공간입니다. 동호회,스터디,주제별 모임을 밴드로 시작하세요.</p>
+                    <p class="main-text-subtitie">밴드는 그룹멤버와 함께 하는 공간입니다. <br>동호회,스터디,주제별 모임을 밴드로 시작하세요.</p>
                 </div>
             </div>    
         </main>
@@ -217,33 +298,33 @@
         <section id="main-bottom-page">
             <div class="bottom-container">
                 <div class="main-sub-box">
-                    <figure class="main-sub-image">
-                        <img src="../image/화이팅.jpg" alt="fighting">
+                    <figure>
+                        <img class="main-sub-image" src="../image/화이팅.jpg" alt="fighting">
                     </figure>
                     <h4>어떤 모임이라도!</h4>
-                    <p>친구,가족,동료 등 함께 하고 싶은 사람과 우리만의 공간을 만들어보세요.</p>
+                    <p>친구,가족,동료 등 함께 하고 싶은 사람과 <br>우리만의 공간을 만들어보세요.</p>
                 </div>
 
                 <div class="main-sub-box">
-                    <figure class="main-sub-image">
-                        <img src="../image/웃는외국인.jpg" alt="smile">
+                    <figure>
+                        <img class="main-sub-image" src="../image/웃는외국인.jpg" alt="smile">
                     </figure>
                     <h4>모임에 딱 맞는 기능들</h4>
-                    <p>투표로 의견을 모으고, 함께 일정을 공유하며 게시판과 앨범에는 추억을 쌓아보세요.</p>
+                    <p>투표로 의견을 모으고, 함께 일정을 공유하며 <br>게시판과 앨범에는 추억을 쌓아보세요.</p>
                 </div>
 
                 <div class="main-sub-box">
-                    <figure class="main-sub-image">
-                        <img src="../image/자전거.jpg" alt="bicycle">
+                    <figure>
+                        <img class="main-sub-image" src="../image/자전거.jpg" alt="bicycle">
                     </figure>
                     <h4>내가 원하는 모임 찾기</h4>
-                    <p>취미, 스포츠, 또래 모임 등 나와같은 관심사 밴드를 찾을 수 있어요.</p>
+                    <p>취미, 스포츠, 또래 모임 등 <br>나와같은 관심사 밴드를 찾을 수 있어요.</p>
                 </div>
             </div>
         </section>
 
 
-        <section class="recommend-page">
+        <section id="recommend-page">
             <div class="recommend-container"></div>
                 <div class="top-text">
                     <h4>이런 밴드는 어때요</h4>
