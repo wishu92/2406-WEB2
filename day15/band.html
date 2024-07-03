@@ -12,6 +12,7 @@
 
         .header-page {
             max-width: 1280px;
+            height: 50px;
 
             background-color: rgb(247, 251, 251);
             display: flex;
@@ -19,9 +20,8 @@
             align-items: center;
 
             margin: 0 auto;
-            height: 50px;
 
-            padding: 0 32px;
+            padding: 0 50px;
 
         }
     
@@ -67,48 +67,50 @@
         
         .intro-container {
             max-width: 1280px;
-            height: 800px;
+            height: 900px;
             margin: 0 auto;
             
             background-color: rgb(247, 251, 251);
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-
-            padding: 0 32px;
             
         }
         .intro-image {
             width: 100%;
+            padding: 30px;
 
-        }
+        }   
 
         .intro-image > img {
             display: block;
             width: 100%;
+
+            
         }
 
         .login-contents {
             width: 100%;
-            padding: 32px;
+            padding: 30px;
+
         }
 
         .login-contents > h2 {
-            font-size: 38px;
+            font-size: 60px;
             margin-bottom: 30px;
             
         }
         .sub-title {
-            font-size: 16px;
+            font-size: 20px;
             margin-bottom: 32px;
         }
 
         .click {
             display: block;
-            width: 300px;
-            height: 50px;
+            width: 400px;
+            height: 60px;
 
-            padding: 16px;
+            padding: 20px;
             box-sizing: border-box;
             text-align: center;
             text-decoration: none;
@@ -118,12 +120,12 @@
         .login {           
             background-color: rgb(79, 217, 79);
             color: white;
-            margin-bottom: 10px;
+            margin-bottom: 15px;
             
         }
         .joinbox { 
             background-color: white;
-            margin-bottom: 30px;
+            margin-bottom: 50px;
             color: #222;
         }
         .click:hover {
@@ -132,7 +134,7 @@
 
         .login-contents .injoy-link {
             font-size: 10px;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
            
         }
         .more-link {
@@ -147,7 +149,6 @@
 
         .main-explain {
             max-width: 1280px;
-            height: 600px;
             margin: 0 auto;
 
             display: flex;
@@ -157,14 +158,13 @@
 
         }
         .main-explain figure {
-            width: 100%;
-            height: 100%;
-            flex-shrink: 0;
+            width: 1280px;
         }
 
         .main-image {
             display: block;
-            height: 100%;
+            width: 100%;
+            height: 600px;
             object-fit: cover;
             
         }
@@ -192,7 +192,9 @@
 
         .bottom-container {
             max-width: 1280px;
-            height: 300px;
+            height: 400px;
+            margin: 0 auto;
+
             display: flex;
             gap: 15px;
         }
@@ -221,28 +223,87 @@
             line-height: 18px;
            
         }
+
         #recommend-page {
             padding: 0 32px;
         }
+
         .recommend-container {
             max-width: 1280px;
+            height: 800px;
             margin: 0 auto;
+            background-color: rgb(247, 251, 251);
 
-            display: flex;
-            flex-direction: column;
-            background-color: grey;
-            
+            position: relative;
         }
         .top-text {
+            position: relative;
+            width: 100%;
+            height: 50px;
+
             display: flex;
             justify-content: space-between;
+            align-items: center;
+
+            padding: 30px 30px;
+            box-sizing: border-box;
         }
+
         .top-text > h4 {
             font-size: 20px;
         }
         .top-text > a {
             text-decoration: none;
-            font-size: 10px;
+        }
+
+        .section-contents-box {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            flex-wrap: 1;
+        }
+
+        .recommand-list {
+            display: flex;
+            gap: 10px;
+        }
+
+        .recommand-list-image {
+            display: block;
+            width: 150px;
+            height: 150px;
+
+            border-radius: 30px;
+        }
+        .section-text-box {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+
+        }
+        .section-title > a {
+            text-decoration: none;
+            color: #222;
+        }
+        .section-band {
+            background-color: white;
+            display: inline;
+            border-radius: 50px;
+
+            display: flex;
+            text-decoration: none;
+        }
+        .band-name {
+            font-weight: bold;
+            color: #222;
+        }
+        .band-more {
+            color: #222;
         }
     </style>
 </head>
@@ -325,46 +386,46 @@
 
 
         <section id="recommend-page">
-            <div class="recommend-container"></div>
+            <div class="recommend-container">
                 <div class="top-text">
                     <h4>이런 밴드는 어때요</h4>
                     <a href="">모두보기</a>
                 </div>
 
-                <div class="section-contents-box">
+                <ul class="section-contents-box">
 
-                    <a href="#">
-                        <figure>
-                            <img src="../image/롯데자이언츠.jpg" alt="lotte">
-                        </figure>
-                        <div class="section-text-box">
-                            <a class="section-titie" href="#">롯데자이언츠 팬밴드</a>
-                            <p class="recommend">롯데 팬 모두가 이 밴드에 들어올수 있습니다.</p>
-                            <p class="recommend2">멤버 598 &#183; 리더 롯데사랑 </p>
-                            <a class="section-band" href="#">
-                                <p class="band-name">롯데자이언츠</p>
-                                <p class="band-more">밴드 더보기 &#62; </p>
+                        <li class="recommand-list"><a href="#">
+                            <figure>
+                                <img class="recommand-list-image" src="../image/롯데자이언츠.jpg" alt="lotte">
+                            </figure>
+                            <div class="section-text-box">
+                                <p class="section-title"><a href="#">롯데자이언츠 팬밴드</a></p>
+                                <p class="recommend">롯데 팬 모두가 이 밴드에 들어올수 있습니다.</p>
+                                <p class="recommend2">멤버 598 &#183; 리더 롯데사랑 </p>
+                                <a class="section-band" href="#">
+                                    <p class="band-name">롯데자이언츠 </p>
+                                    <p class="band-more"> 밴드 더보기 &#62; </p>
+                                </a>
+                            </div>
                             </a>
+                        </li>
+
+                            <li class="recommand-list"><a href="#">
+                            <figure>
+                                <img class="recommand-list-image" src="../image/박효신.jpg" alt="박효신">
+                            </figure>
+                            <div class="section-text-box">
+                                <p class="section-title"><a href="#">박효신 팬밴드</a></p>
+                                <p class="recommend">가수 박효신 팬밴드 입니다. 대한민국 최고의 가창력과 영혼...</p>
+                                <p class="recommend2">멤버 1,086 &#183; 리더 효신짱신&#35;운영자리더 </p>
+                                <a class="section-band" href="#">
+                                    <p class="band-name">팬밴드 </p>
+                                    <p class="band-more"> 밴드 더보기 &#62; </p>
+                                </a>
+                            </li>
                         </div>
                     </a>
-
-                    <a href="#">
-                        <figure>
-                            <img src="../image/박효신.jpg" alt="박효신">
-                        </figure>
-                        <div class="aside-text-box">
-                            <a class="aside-titie" href="#">박효신 팬밴드</a>
-                            <p class="recommend">가수 박효신 팬밴드 입니다. 대한민국 최고의 가창력과 영혼...</p>
-                            <p class="recommend2">멤버 1,086 &#183; 리더 효신짱신&#35;운영자리더 </p>
-                            <a class="aside-band" href="#">
-                                <p class="band-name">팬밴드</p>
-                                <p class="band-more">밴드 더보기 &#62; </p>
-                            </a>
-                        </div>
-                    </a>
-
-
-                </div>
+                </ul>
             </div>
         </section>
 
