@@ -9,59 +9,63 @@
         #my-section {
             padding: 0 32px;
         }
+
         .section-container {
-            /* max-width와 width는 같은 속성처럼 보이지만 별개의 속성 */
+
+              /* max-width와 width는 같은 속성처럼 보이지만 별개의 속성 */
             /* pc에서는 width는 기본값인 100%, 1280이 보장되는 공간까지는 width 100%유지함?*/
+            /* 0 ~ 1344px (32+32+1280)까지 */
             max-width: 1280px;
             margin: 0 auto;
+
         }
-        .contents {
+
+        .container {
             display: flex;
             gap: 20px;
             margin-bottom: 16px;
         }
-        figure {
-            /* 어차피 위에서 flex를 주었기때문에 절반차지하는 것으로  */
+
+        .image {
+             /* 어차피 위에서 flex를 주었기때문에 절반차지하는 것으로  */
             width: 100%;
             aspect-ratio: 1;
             background-color: grey;
         }
-        .contents-explane {
+
+        .explain {
             width: 100%;
         }
-        .contents-explane > h2 {
-            font-size: 24px;
+
+        .explain > h2 {
+            font-size: 32px;
             font-weight: bold;
-            color: #222;
             margin-bottom: 8px;
+
         }
-        
-        .contents-explane > .sub-title {
-            font-size: 20px;
-            font-weight: 700;
-            color: #444;
+
+        .sub-title {
+            font-size: 16px;
             margin-bottom: 16px;
         }
 
-        .contents-explane > .content-text {
+        .text {
             color: #666;
-
-        }
-        
-        @media screen and (max-width:767px) {
-            /* 모바일사이즈767 이하일때 부터 아래 속성을 주겠다. */
-            #my-section {
-                padding: 0 20px;
-            }
-
-            .contents {
-                flex-direction: column;
-                margin-bottom: 48px;
-            }
         }
 
+     @media screen and (max-width:767px) {
+          /* 0 ~ 최대767px까지는 아래 속성을 주겠다. */
+        #my-section {
+            padding: 0 16px;
+        }
+        .container {
+            
+            flex-direction: column;
+            margin-bottom: 48px;
+        }
+     }
 
-        /* 
+             /* 
             상단에서 max-width를 주었기때문에 굳이 없어도 됨.
             32+32+1280 = 1344 /pc기준 figure가 1280이고 padding이 32이니까
             최대1344px 이하일때 변화를 주겠다는 뜻. (~1344까지는 유지하겠다는뜻)
@@ -77,18 +81,21 @@
 <body>
     <section id="my-section">
         <div class="section-container">
-            <figure class="my-img"></figure>
-            <div class="content-explane">
-                <h2>제목 영역</h2>
-                <p class="sub-title">부제목 영역</p>
-                <p class="content-text">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo expedita, culpa consequuntur magnam, minus impedit tenetur assumenda velit laudantium aut optio quam! Quisquam error excepturi nemo non incidunt atque numquam?
-                </p>
+            <div class="container">
+                <figure class="image"></figure>
+                <div class="explain">
+                    <h2>제목 영역</h2>
+                    <p class="sub-title">부제목 영역</p>
+                    <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam, minus impedit necessitatibus provident enim sapiente, ipsum iusto recusandae at corrupti quisquam eius atque, nihil distinctio ipsa sit. Incidunt, totam ullam.</p>
+                </div>
             </div>
         </div>
     </section>
 
 
+
+
+        <!-- pc 전체 화면을 한번 감싸는 느낌으로 section넣기.  -->
       <!-- 섹션에는 padding 0 32px 기본으로 넣어주고, 모바일에서 변경 -->
       <section>
         <!-- 섹션 컨테이너에는 max-width: 컨테이너사이즈px로 구조 잡기 -->
@@ -96,5 +103,7 @@
             <!-- 내용작성 -->
         </div>
     </section>
+
+
 </body>
 </html>
