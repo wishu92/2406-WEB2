@@ -6,34 +6,32 @@
     <title>Document</title>
     <link rel="stylesheet" href="../reset.css">
     <style>
+        body { 
+            padding: 0 32px ;
+            /* body자체에 padding 0 32px을 주고 header에 배경색, padding.(높이margin-top,bottom 필요할 때*/
+        }
+        
         header {
-            padding: 0 32px;
+            background-color: rgb(247, 251, 251);
+            padding: 25px 32px
+            /* 위에서 padding 0 32px 이 중첩되므로 32px도 넣어줌. */
+            
         }
 
         .header-page {
-            max-width: 1280px;
-            height: 50px;
-
-            background-color: rgb(247, 251, 251);
+            width: 1000px;
+            margin: 0 auto;
+            
             display: flex;
             justify-content: space-between;
             align-items: center;
-
-            margin: 0 auto;
-
-            padding: 0 50px;
-
         }
     
-        /* .hide-text {
-            visibility: hidden;
-           
-        } */
 
         .header-list  {
             display: flex;
             align-items: center;
-    
+            gap: 30px;
         }
 
         .join {
@@ -41,68 +39,68 @@
             color: #222;
             font-size: 12px;
             font-weight: bold;
-            margin: 0 32px;
         }
+
         .login-box2 {
+                display: block;
+                width: 80px;
+                height: 30px;
+                padding: 10px;
+                border-radius: 3px;
+                box-sizing:border-box;
+                
+                text-align: center;
+                
+                font-size: 12px;
+                font-weight: bold;
+                
+                background-color: rgb(74, 199, 74);
+                color: white;
+                text-decoration: none;
+            }            
+
+        .img {
             display: block;
-            width: 80px;
-            height: 30px;
-            padding: 10px;
-            border-radius: 3px;
-            box-sizing:border-box;
-            
-            text-align: center;
-            
-            font-size: 12px;
-            font-weight: bold;
+            width: 100%;
+         }
 
-            background-color: rgb(74, 199, 74);
-            color: white;
-            text-decoration: none;
-        }
-
+        /* img를 하나하나 block 하기보단.
+        페이지에 있는 img 전부에 다가 block 주기 
+        border radius는 figure말고 img에 주기.*/
+        
         #intro {
-            padding: 0 32px;
+            background-color: rgb(247, 251, 251);
+            padding: 50px 32px;
+            /* 높이를 주지 말고 padding을 주기. */
+            
         }
         
         .intro-container {
-            max-width: 1280px;
-            height: 900px;
+            width: 1000px;
             margin: 0 auto;
             
-            background-color: rgb(247, 251, 251);
             display: flex;
             justify-content: center;
             align-items: center;
-            
+
+            gap: 50px;
         }
-        .intro-image {
-            width: 100%;
-            padding: 30px;
 
-        }   
-
-        .intro-image > img {
-            display: block;
-            width: 100%;
-
-            
-        }
 
         .login-contents {
             width: 100%;
-            padding: 30px;
-
+            flex-shrink: 0;
         }
 
         .login-contents > h2 {
-            font-size: 60px;
+            font-size: 50px;
             margin-bottom: 30px;
             
         }
         .sub-title {
             font-size: 20px;
-            margin-bottom: 32px;
+            margin-bottom: 30px;
+            color: #444;
         }
 
         .click {
@@ -114,13 +112,15 @@
             box-sizing: border-box;
             text-align: center;
             text-decoration: none;
+
+            font-size: 18px;
             
         }
 
         .login {           
             background-color: rgb(79, 217, 79);
             color: white;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
             
         }
         .joinbox { 
@@ -133,7 +133,7 @@
         }
 
         .login-contents .injoy-link {
-            font-size: 10px;
+            font-size: 12px;
             margin-bottom: 20px;
            
         }
@@ -142,13 +142,8 @@
             font-weight: bold;
         }
 
-
-        #main-page {
-            padding: 0 32px;
-        }
-
         .main-explain {
-            max-width: 1280px;
+            width: 1000px;
             margin: 0 auto;
 
             display: flex;
@@ -157,16 +152,13 @@
             position: relative;
 
         }
-        .main-explain figure {
-            width: 1280px;
+        .main-explain > figure {
+            width: 100%;
         }
 
         .main-image {
-            display: block;
-            width: 100%;
             height: 600px;
-            object-fit: cover;
-            
+            object-fit: cover;            
         }
 
         .main-text {
@@ -191,12 +183,12 @@
         }
 
         .bottom-container {
-            max-width: 1280px;
-            height: 400px;
+            width: 1000px;
             margin: 0 auto;
 
+            padding: 60px 32px;
             display: flex;
-            gap: 15px;
+            gap: 25px;
         }
 
         .main-sub-box {
@@ -229,7 +221,7 @@
         }
 
         .recommend-container {
-            max-width: 1280px;
+            width: 1000px;
             height: 800px;
             margin: 0 auto;
             background-color: rgb(247, 251, 251);
@@ -292,11 +284,13 @@
         }
         .section-band {
             background-color: white;
-            display: inline;
-            border-radius: 50px;
+            display: block;
+            border-radius: 16px;
 
             display: flex;
             text-decoration: none;
+            width: fit-content;
+            padding: 10px;
         }
         .band-name {
             font-weight: bold;
@@ -304,6 +298,24 @@
         }
         .band-more {
             color: #222;
+        }
+        
+        #download-page {
+            padding: 0 32px;
+        }
+
+        .download-container {
+            width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .download-container > figure {
+            width: 100px;
+        }
+        .app-log {
+            display: block;
+            background: url('imgs/이미지.png') no-repeat -162px 0;
+            
         }
     </style>
 </head>
@@ -328,7 +340,7 @@
 
         <section id="intro">
             <div class="intro-container">
-                <figure class="intro-image">
+                <figure>
                     <img src="../image/메인사진.jpg" alt="메인이미지">
                 </figure>
                 <div class="login-contents">
@@ -429,19 +441,21 @@
             </div>
         </section>
 
-        <section class="download-page">
-            <div class="app-log">
-                <!-- -스프라이트 -->
-            </div>
-            <div class="download-text-box">
-                <p class="download-title">밴드앱을 다운로드 하세요!</p>
-                <p class="download-text">당신의 모임도 BAND로 시작하세요.</p>
-            </div>
-            <div class="download-google"> 
-                <!-- -스프라이트 -->
-            </div>
-            <div class="download-store">
-                <!-- -스프라이트 -->
+        <section id="download-page">
+            <div class="download-container">
+                <figure>
+                    <img class="app-image" src="../image/이미지.png" alt="스프라이트">
+                </figure>
+                <div class="download-text-box">
+                    <p class="download-title">밴드앱을 다운로드 하세요!</p>
+                    <p class="download-text">당신의 모임도 BAND로 시작하세요.</p>
+                </div>
+                <div class="download-google"> 
+                    <!-- -스프라이트 -->
+                </div>
+                <div class="download-store">
+                    <!-- -스프라이트 -->
+                </div>
             </div>
         </section>
 
