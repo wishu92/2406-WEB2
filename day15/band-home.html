@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        img {
+            display: block;
+            width: 100%;
+        }
+
+        body > section {
+            padding: 0 32px;
+        }
+
+        .section-container {
+            width: 1000px;
+            margin: 0 auto;
+        /* 위의 값들은 기본 */
+        }
+
+        header {
+            padding: 30px 32px;
+            background-color: rgb(247, 251, 251);
+
+        }
+
+        .header-container {
+            width: 1000px;
+            margin: 0 auto;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .header-list {
+            width: 250px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-join {
+            text-decoration: none;
+            color: #555;
+            font-weight: bold;
+            font-size: 13px;
+        }
+        .header-login {
+            width: 70px;
+            height: 35px;
+            background-color: rgb(48, 218, 48);
+            color: white;
+            text-decoration: none;
+            font-size: 13px;
+            line-height: 30px;
+            text-align: center;
+            border-radius: 3px
+        }
+
+        #intro {
+            padding: 30px 32px;
+            background-color: rgb(247, 251, 251);
+        }
+        #intro > .section-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .intro-container > h1 {
+            color: #333;
+            font-size: 50px;
+            line-height: 60px;
+            margin-bottom: 30px;
+        }
+
+        .intro-container > p {
+            color: #555;
+        }
+        
+        .intro-second-text {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .intro-login {
+            display: block;
+            width: 400px;
+            height: 60px;
+
+            text-decoration: none;
+            text-align: center;
+            line-height: 60px;
+            font-size: 20px;
+
+        }
+
+        .first {
+            background-color: rgb(52, 208, 52);
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .join {
+            background-color: white;
+            color: #444;
+            margin-bottom: 50px;
+        }
+
+        .intro-login:hover {
+            box-shadow: 3px 3px 3px 3px rgb(227, 227, 227);
+
+        }
+
+        .intro-list {
+            margin-bottom: 15px;
+        }
+
+        .intro-list > a {
+            color: rgb(61, 188, 109);
+            font-weight: bold;
+        }
+
+
+        .meeting-container {
+            width: 1000px;
+            margin: 0 auto;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            position: relative;
+        }
+        /* .meeting-img {
+            width: 1000px;
+            height: 500px;
+        }
+
+        .meeting-img > img {
+            object-fit: cover;
+        } */
+        
+        .meeting-text {
+            position: absolute;
+            color: rgb(236, 233, 233);
+            text-align: center;
+
+        }
+
+        .meeting-text > h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+        .meeting-text > p {
+            font-size: 18px;
+            line-height: 25px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a class="logo-spr" href="#">
+                <span class="hide-text">
+                    BAND
+                </span>
+            </a>
+            <div class="header-list">
+                <select id="">
+                    <option>한국어</option>
+                    <option>English</option>
+                </select>
+                <a class="header-join" href="#">회원가입</a>
+                <a class="header-login" href="#">로그인</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="intro">
+        <div class="section-container">
+            <figure>
+                <img src="../image/메인사진.jpg" alt="메인이미지">
+            </figure>
+            <div class="intro-container">
+                <h1>모임이 쉬워진다! 우리끼리 밴드</h1>
+                <p class="intro-second-text">당신의 모임도 BAND로 시작하세요.</p>
+                <a class="intro-login first" href="#">로그인</a>
+                <a class="intro-login join" href="#">회원가입</a>
+                <p class="intro-list">내게 맞는 밴드를 만나려면 &nbsp; <a href="#">밴드 찾기</a></p>
+                <p class="intro-list">모임별 맨드 활용법 &nbsp; <a href="#">밴드 가이드 보기</a></p>
+                <p class="intro-list">만 13세 미만이라면? &nbsp; <a href="#">'밴드 키즈' 알아보기</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section id="meeting">
+        <div class="meeting-container">
+            <!-- class name 확인하기 -->
+            <figure class="meeting-img">
+                <img src="../image/회의외국인.jpg" alt="회의">
+            </figure>
+            <div class="meeting-text">
+            <h2>모임을 위한 공간, 밴드</h2>
+            <p>밴드는 그룹 멤버와 함께 하는 공간입니다. <br>
+                동호회, 스터디, 주제별 모임을 밴드로 시작하세요.
+            </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="meeting-explain">
+        <div class="section-container">
+            <div class="explain-contect">
+                <figure>
+                    <img src="../image/화이팅.jpg" alt="화이팅">
+                </figure>
+                <h3>어떤 모임이라도!</h3>
+                <p>친구,가족,동료 등 함께 하고 싶은 사람과 우리만의 공간을 만들어보세요.</p>
+            </div>
+            <div class="explain-contect">
+                <figure>
+                    <img src="../image/웃는외국인.jpg" alt="웃는 외국인">
+                </figure>
+                <h3>어떤 모임이라도!</h3>
+                <p>친구,가족,동료 등 함께 하고 싶은 사람과 우리만의 공간을 만들어보세요.</p>
+            </div>
+            <div class="explain-contect">
+                <figure>
+                    <img src="../image/자전거.jpg" alt="자전거모임">
+                </figure>
+                <h3>어떤 모임이라도!</h3>
+                <p>친구,가족,동료 등 함께 하고 싶은 사람과 우리만의 공간을 만들어보세요.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="recommend">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>이런 밴드는 어때요</h2>
+                <a href="#">모두보기</a>
+            </div>
+            <div class="recommend-container">
+                <ul class="band-recommend-list">
+                    <li class="band-recommend">
+                        <a href="#" class="unit-link"></a>
+                        <figure>
+                            <img src="../image/롯데자이언츠.jpg" alt="롯데자이언츠">
+                        </figure>
+                        <div class="band-recommend-content">
+                            <h3><a href="#">롯데자이언츠 팬밴드</a></h3>
+                            <p>롯데 팬 모두가 이 밴드에 들어올 수 있습니다요아료알ㅇ랑라요라요ㅏ료ㅏ요라</p>
+                            <p class="meta">
+                                멤버 <span class="member-count">598</span> . 리더 <span class="leader">롯데사랑</span>
+                            </p>
+                            <a class="category-button" href="#"><span class="category">롯데자이언츠</span> 밴드 더보기</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="app-download">
+        <div class="section-container">
+            <figure>
+                <img src="../image/" alt="">
+            </figure>
+            <div class="app-download-text">
+                <h2></h2>
+                <p></p>
+            </div>
+            <div class="app-download-button">
+                <a class="google-play download-button" href=""></a>
+                <a class="app-store download-button" href=""></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <ul>
+                <li></li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
