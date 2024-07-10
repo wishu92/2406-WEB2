@@ -21,6 +21,29 @@
         /* 위의 값들은 기본 */
         }
 
+
+
+        .logo-spr {
+            display: block;
+            background: url('../image/이미지.png') no-repeat 0 -98px;
+            width: 78px;
+            height: 29px;
+        }
+
+        .hide-text {
+            position: absolute;
+            clip: rect(1px, 1px, 1px, 1px);
+            clip-path: inset(0 0 99.9% 99.9%);
+            overflow: hidden;
+            height: 1px;
+            width: 1px;
+            padding: 0;
+            border: 0;
+        }
+
+
+
+
         header {
             padding: 30px 32px;
             background-color: rgb(247, 251, 251);
@@ -28,7 +51,7 @@
         }
 
         .header-container {
-            width: 1000px;
+            /* width: 1000px; */
             margin: 0 auto;
 
             display: flex;
@@ -194,14 +217,15 @@
 
 
         #recommend  {
-            background-color: rgb(230, 234, 236);
+            background-color: rgb(243, 249, 252);
+            padding: 50px 32px;
         }
         .section-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
 
-            padding: 40px 32px;
+            margin-bottom: 30px;
         }
 
         .section-header > h2 {
@@ -223,9 +247,9 @@
         .band-recommend-list {
             display: flex;
             flex-wrap: wrap;
+
+            row-gap: 15px;
         
-            row-gap: 20px;
-            /* row gap???? */
         }
         .band-recommend {
             display: flex;
@@ -247,6 +271,9 @@
             color: #222;
             font-size: 15px;
             font-weight: bold;
+
+            position: relative;
+            /* ?????- */
         }
 
         .link:hover {
@@ -272,7 +299,150 @@
 
         }
 
+        .category-button {
+            font-size: 12px;
+            text-decoration: none;
+            color: #666;
+
+            background-color: aliceblue;
+            padding: 8px 10px;
+            
+            width: fit-content;
+            /* 글씨 크기에 맞게 넓이정하기. 유동적인 구조로 만들때 */
+            border-radius: 15px;
+            border: 1px white solid;
+            /* 미리 선을 안보이게 해놓고 호버했을때 사이즈 변하지 않게 */
+            position: relative;
+            z-index: 10;
+            /* 아래 링크유리판 끼울때 앞으로 (z축으로) 튀어나오게 하는 효과 */
+        }
+        .category-button:hover {
+            border: 1px solid grey;
+        }
+        .category {
+            text-decoration: none;
+            font-size: 12px;
+            color: #222;
+            font-weight: bold;
+        }
+        /* .category-button::after {
+            content: '';
+            display: block;
+            width: 4px;
+            height: 4px;
+            transform: rotate(45deg);
+            border: 2px solid #bbb;
+            border-left: none;
+            border-bottom: none;
+        } 
+            꺽쇠만들기 */
+
+        .unit-link {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            /* width: 100%;
+            height: 100%; 링크유리판을 끼우는 느낌  */
+        }
+        .band-recommend {
+            position:relative;
+        }
+
+
+
+
+        #app-download {
+            padding: 30px 32px;
+        }
+
+        #app-download > .section-container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .app-download-logo {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .band-logo-spr {
+            display: block;
+            background: url('../image/이미지.png') no-repeat -162px 0;
+            width: 70px;
+            height: 70px;
+        }
+        .app-download-text > h2 {
+            font-size: 25px;
+            color: #222;
+            margin-bottom: 10px;
+        }
+
+        .app-download-text > p {
+            font-size: 15px;
+            color: #666;
+        }
+
+        .app-download-button {
+            display: flex;
+            gap: 10px;
+        }
+
+        .google-play {
+            background: url('../image/이미지.png') no-repeat 0 0;
+            width: 160px;
+            height: 47px;
+        }
+        .app-store {
+            background: url('../image/이미지.png') no-repeat 0 -49px;
+            width: 160px;
+            height: 47px;
+        }
+
+
+
+
+        footer {
+            padding: 20px 32px;
+            background-color: rgb(84, 84, 106);
+        }
         
+        .footer-menu-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            row-gap: 5px;
+            margin-bottom: 10px;
+            
+        }
+
+        .footer-menu-list a {
+            color: rgb(202, 198, 198);
+            text-decoration: none;
+            font-size: 13px;
+        }
+
+        .footer-menu-list a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer-menu-list > li::after{
+            content: '  ·';
+            color: white;
+            
+        }
+
+
+        .footer-copy {
+            color: white;
+            font-size: 13px;
+        }
+        .indi-inform {
+            font-weight: bold;
+        }
+
     </style>
 </head>
 <body>
@@ -369,48 +539,148 @@
                         </figure>
                         <div class="band-recommend-content">
                             <h3><a href="#" class="link">롯데자이언츠 팬밴드</a></h3>
-                            <p>롯데 팬 모두가 이 밴드에 들어올 수 있습니다ddddddddddddddddddddddddddddd</p>
+                            <p>롯데 팬 모두가 이 밴드에 들어올 수 있습니다</p>
                             <p class="meta">
-                                멤버 <span class="member-count">598</span> . 리더 <span class="leader">롯데사랑</span>
+                                멤버 <span class="member-count">598</span> &#183; 리더 <span class="leader">롯데사랑</span>
                             </p>
-                            <a class="category-button" href="#"><span class="category">롯데자이언츠</span> 밴드 더보기</a>
+                            <a class="category-button" href="#"><span class="category">롯데자이언츠</span> 밴드 더보기 &#62;</a>
                         </div>
                     </li>
-
 
                     <li class="band-recommend">
                         <a href="#" class="unit-link"></a>
                         <figure>
-                            <img src="../image/롯데자이언츠.jpg" alt="롯데자이언츠">
+                            <img src="../image/베트남.jpg" alt="베트남">
                         </figure>
                         <div class="band-recommend-content">
-                            <h3><a href="#" class="link">롯데자이언츠 팬밴드</a></h3>
-                            <p>롯데 팬 모두가 이 밴드에 들어올 수 있습니다료</p>
+                            <h3><a href="#" class="link">굿모닝 베트남</a></h3>
+                            <p>굿모닝베트남은 베트남 여행 정보를 기본적으로 하며 국내 및 해외여행</p>
                             <p class="meta">
-                                멤버 <span class="member-count">598</span> . 리더 <span class="leader">롯데사랑</span>
+                                멤버 <span class="member-count">17,652</span> &#183; 리더 <span class="leader">신짜오</span>
                             </p>
-                            <a class="category-button" href="#"><span class="category">롯데자이언츠</span> 밴드 더보기</a>
+                            <a class="category-button" href="#"><span class="category">해외여행</span> 밴드 더보기 &#62;</a>
                         </div>
                     </li>
-
-
 
                     <li class="band-recommend">
                         <a href="#" class="unit-link"></a>
                         <figure>
-                            <img src="../image/롯데자이언츠.jpg" alt="롯데자이언츠">
+                            <img src="../image/박효신.jpg" alt="박효신 팬밴드">
                         </figure>
                         <div class="band-recommend-content">
-                            <h3><a href="#" class="link">롯데자이언츠 팬밴드</a></h3>
-                            <p>롯데 팬 모두가 이 밴드에 들어올 수 있습니다요아료알ㅇ</p>
+                            <h3><a href="#" class="link">박효신 팬밴드</a></h3>
+                            <p>가수 박효신의 팬밴드입니다 대한민국 최고의 가창력과 영혼을 담은</p>
                             <p class="meta">
-                                멤버 <span class="member-count">598</span> . 리더 <span class="leader">롯데사랑</span>
+                                멤버 <span class="member-count">1,068</span> &#183; 리더 <span class="leader">효신짱신#운영자리더</span>
                             </p>
-                            <a class="category-button" href="#"><span class="category">롯데자이언츠</span> 밴드 더보기</a>
+                            <a class="category-button" href="#"><span class="category">롯데자이언츠</span> 밴드 더보기 &#62;</a>
                         </div>
                     </li>
 
+                    <li class="band-recommend">
+                        <a href="#" class="unit-link"></a>
+                        <figure>
+                            <img src="../image/kiwoom.jpg" alt="키움">
+                        </figure>
+                        <div class="band-recommend-content">
+                            <h3><a href="#" class="link">키움 히어로즈 팬밴드</a></h3>
+                            <p>여기는 히어로즈 야구팀 대표 팬밴드이자 키움히어로즈 팬밴드입니다.</p>
+                            <p class="meta">
+                                멤버 <span class="member-count">6,812</span> &#183; 리더 <span class="leader">가가멜</span>
+                            </p>
+                            <a class="category-button" href="#"><span class="category">롯데자이언츠</span> 밴드 더보기 &#62;</a>
+                        </div>
+                    </li>
 
+                    <li class="band-recommend">
+                        <a href="#" class="unit-link"></a>
+                        <figure>
+                            <img src="../image/기후변화.jpg" alt="국립">
+                        </figure>
+                        <div class="band-recommend-content">
+                            <h3><a href="#" class="link"> 국립공원 국민모니터링</a></h3>
+                            <p>국립공원 생물계절 모니터링을 위한 밴드입니다.</p>
+                            <p class="meta">
+                                멤버 <span class="member-count">797</span> &#183; 리더 <span class="leader">국립공원연구원</span>
+                            </p>
+                            <a class="category-button" href="#"><span class="category">생태</span> 밴드 더보기 &#62;</a>
+                        </div>
+                    </li>
+
+                    <li class="band-recommend">
+                        <a href="#" class="unit-link"></a>
+                        <figure>
+                            <img src="../image/손흥민.jpg" alt="토트넘">
+                        </figure>
+                        <div class="band-recommend-content">
+                            <h3><a href="#" class="link">토트넘과 K리그 팬밴드 +해외축구</a></h3>
+                            <p>토트넘과 K리그의 팬밴드이지만 축구팀 팬이시면 누구든 환영합니다</p>
+                            <p class="meta">
+                                멤버 <span class="member-count">699</span> &#183; 리더 <span class="leader">갓쏘니[리더]</span>
+                            </p>
+                            <a class="category-button" href="#"><span class="category">축구 팬밴드</span> 밴드 더보기 &#62;</a>
+                        </div>
+                    </li>
+
+                    <li class="band-recommend">
+                        <a href="#" class="unit-link"></a>
+                        <figure>
+                            <img src="../image/인터뷰.jpg" alt="축구대표팀">
+                        </figure>
+                        <div class="band-recommend-content">
+                            <h3><a href="#" class="link">대한민국 축구대표팀 팬밴드</a></h3>
+                            <p>안녕하세요 대한민국 국가대표팀 팬밴드입니다. 많이 많이 가입해주세요</p>
+                            <p class="meta">
+                                멤버 <span class="member-count">830</span> &#183; 리더 <span class="leader">양상현[대표팀 귀화] </span>
+                            </p>
+                            <a class="category-button" href="#"><span class="category">축구선수 팬밴드</span> 밴드 더보기 &#62;</a>
+                        </div>
+                    </li>
+
+                    <li class="band-recommend">
+                        <a href="#" class="unit-link"></a>
+                        <figure>
+                            <img src="../image/한옥.jpg" alt="역사">
+                        </figure>
+                        <div class="band-recommend-content">
+                            <h3><a href="#" class="link">문화역사 유적지 소개</a></h3>
+                            <p>각종 언론매체에 보도된 문화유적지 자료를 찾아서 필요하신분은</p>
+                            <p class="meta">
+                                멤버 <span class="member-count">1,057</span> &#183; 리더 <span class="leader">이상섭/60/인천</span>
+                            </p>
+                            <a class="category-button" href="#"><span class="category">문화역사</span> 밴드 더보기 &#62;</a>
+                        </div>
+                    </li>
+
+                    <li class="band-recommend">
+                        <a href="#" class="unit-link"></a>
+                        <figure>
+                            <img src="../image/그림.jpg" alt="문화">
+                        </figure>
+                        <div class="band-recommend-content">
+                            <h3><a href="#" class="link">문화스토리</a></h3>
+                            <p>글과 그림 그리고 음악으로 행복을 함께</p>
+                            <p class="meta">
+                                멤버 <span class="member-count">2,791</span> &#183; 리더 <span class="leader">리더.D.H.kim</span>
+                            </p>
+                            <a class="category-button" href="#"><span class="category">문화예술</span> 밴드 더보기 &#62;</a>
+                        </div>
+                    </li>
+
+                    <li class="band-recommend">
+                        <a href="#" class="unit-link"></a>
+                        <figure>
+                            <img src="../image/식물.jpg" alt="식물">
+                        </figure>
+                        <div class="band-recommend-content">
+                            <h3><a href="#" class="link">맑은 마음 우체부</a></h3>
+                            <p>환영합니다. 맑은 마음 우체부와 함께 성인의 어록을 공부 및</p>
+                            <p class="meta">
+                                멤버 <span class="member-count">1,011</span> &#183; 리더 <span class="leader">만허 滿虛</span>
+                            </p>
+                            <a class="category-button" href="#"><span class="category">좋은글</span> 밴드 더보기 &#62;</a>
+                        </div>
+                    </li>
 
 
                 </ul>
@@ -418,14 +688,15 @@
         </div>
     </section>
 
+
     <section id="app-download">
         <div class="section-container">
-            <figure>
-                <img src="../image/" alt="">
-            </figure>
-            <div class="app-download-text">
-                <h2></h2>
-                <p></p>
+            <div class="app-download-logo">
+                <div class="band-logo-spr"></div>
+                <div class="app-download-text">
+                    <h2>밴드앱을 다운로드 하세요!</h2>
+                    <p>당신의 모임도 BAND로 시작하세요.</p>
+                </div>
             </div>
             <div class="app-download-button">
                 <a class="google-play download-button" href=""></a>
@@ -435,10 +706,27 @@
     </section>
 
     <footer>
-        <div class="footer-container">
-            <ul>
-                <li></li>
-            </ul>
+        <div class="section-container">
+            <nav class="footer-nav">
+                <ul class="footer-menu-list">
+                    <li><a href="">블로그</a></li> 
+                    <li><a href="">공지사항</a></li>
+                    <li><a href="">스티커제안</a></li>
+                    <li><a href="">광고</a></li>
+                    <li><a href="">이용약관</a></li>
+                    <li><a href="" class="indi-inform">개인정보처리방침</a></li>
+                    <li><a href="">쿠키 설정</a></li>
+                    <li><a href="">CCPA 개인 정보 관리</a></li>
+                    <li><a href="">청소년 보호를 위한 노력</a></li>
+                    <li><a href="">활동정책</a></li>
+                    <li><a href="">권리침해 신고안내</a></li>
+                    <li><a href="">개발자</a></li>
+                    <li><a href="">도움말</a></li>              
+                </ul>
+            </nav>
+            <p class="footer-copy">
+                BAND &copy; 2024
+            </p>
         </div>
     </footer>
 </body>
