@@ -124,13 +124,12 @@
             font-weight: bold;
         }
 
-
         #meeting {
-            padding: 0 32px;
+            padding: 0 0;
         }
+
         .meeting-container {
-            width: 1000px;
-            margin: 0 auto;
+            width: 100%;
 
             display: flex;
             justify-content: center;
@@ -148,7 +147,7 @@
         }
         .meeting-text {
             position: absolute;
-            color: rgb(236, 233, 233);
+            color: rgb(241, 239, 239);
             text-align: center;
 
         }
@@ -162,6 +161,118 @@
             line-height: 25px;
         }
 
+
+
+
+        #meeting-explain > .section-container {
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            gap: 30px;
+            padding: 60px 32px;
+        }
+
+        .explain-contect > figure {
+            margin-bottom: 20px;
+        }
+
+        .explain-contect > h3 {
+            font-size: 25px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .explain-contect > p {
+            font-size: 15px;
+            color: #444;
+            line-height: 25px;
+        }
+
+
+
+
+        #recommend  {
+            background-color: rgb(230, 234, 236);
+        }
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            padding: 40px 32px;
+        }
+
+        .section-header > h2 {
+            font-size: 25px;
+            color: #333;
+        }
+
+        .section-header > a {
+            text-decoration: none;
+            font-size: 15px;
+            color: #444;
+        }
+
+        .section-header > a:hover {
+            text-decoration: underline;
+        }
+
+
+        .band-recommend-list {
+            display: flex;
+            flex-wrap: wrap;
+        
+            row-gap: 20px;
+            /* row gap???? */
+        }
+        .band-recommend {
+            display: flex;
+            gap: 8px;
+            width: 50%;
+        }
+        .band-recommend > figure {
+            width: 100px;
+            /* img가 아니라 figure에 100px주면 높이도 같이 변경..? */
+        }
+
+        .band-recommend > figure > img {
+            border-radius: 15px;
+            /* 둥글게 - 사진에게 직접주기 */
+        }
+
+        .link {
+            text-decoration: none;
+            color: #222;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        .link:hover {
+            text-decoration: underline;
+        }
+
+        .band-recommend-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .band-recommend-content > p {
+            color: #555;
+            font-size: 13px;
+
+            width: 380px;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            word-break: break-all;
+            /* ... 줄임말 만들기 코드 */
+
+        }
+
+        
     </style>
 </head>
 <body>
@@ -202,10 +313,8 @@
 
     <section id="meeting">
         <div class="meeting-container">
-            <!-- class name 확인하기 -->
-            <figure class="meeting-img">
-                <img src="../image/회의외국인.jpg" alt="회의">
-            </figure>
+            <div class="background-box"></div>
+            <!-- background -->
             <div class="meeting-text">
             <h2>모임을 위한 공간, 밴드</h2>
             <p>밴드는 그룹 멤버와 함께 하는 공간입니다. <br>
@@ -218,23 +327,29 @@
     <section id="meeting-explain">
         <div class="section-container">
             <div class="explain-contect">
-                <div class="background-box"></div>
+                <figure>
+                    <img src="../image/화이팅.jpg" alt="화이팅">
+                </figure>
                 <h3>어떤 모임이라도!</h3>
-                <p>친구,가족,동료 등 함께 하고 싶은 사람과 우리만의 공간을 만들어보세요.</p>
+                <p>친구,가족,동료 등 함께 하고 싶은 사람과 <br> 
+                    우리만의 공간을 만들어보세요.</p>
             </div>
             <div class="explain-contect">
                 <figure>
                     <img src="../image/웃는외국인.jpg" alt="웃는 외국인">
                 </figure>
-                <h3>어떤 모임이라도!</h3>
-                <p>친구,가족,동료 등 함께 하고 싶은 사람과 우리만의 공간을 만들어보세요.</p>
+                <h3>모임에 딱 맞는 기능들</h3>
+                <p>투표로 의견을 모으고, 함께 일정을 공유하며 <br>
+                    게시판과 앨범에는 추억을 쌓아보세요.
+                </p>
             </div>
             <div class="explain-contect">
                 <figure>
                     <img src="../image/자전거.jpg" alt="자전거모임">
                 </figure>
-                <h3>어떤 모임이라도!</h3>
-                <p>친구,가족,동료 등 함께 하고 싶은 사람과 우리만의 공간을 만들어보세요.</p>
+                <h3>내가 원하는 모임 찾기</h3>
+                <p>취미, 스포츠, 또래 모임 등 <br>
+                    나와같은 관심가 밴드를 찾을 수 있어요.</p>
             </div>
         </div>
     </section>
@@ -253,14 +368,51 @@
                             <img src="../image/롯데자이언츠.jpg" alt="롯데자이언츠">
                         </figure>
                         <div class="band-recommend-content">
-                            <h3><a href="#">롯데자이언츠 팬밴드</a></h3>
-                            <p>롯데 팬 모두가 이 밴드에 들어올 수 있습니다요아료알ㅇ랑라요라요ㅏ료ㅏ요라</p>
+                            <h3><a href="#" class="link">롯데자이언츠 팬밴드</a></h3>
+                            <p>롯데 팬 모두가 이 밴드에 들어올 수 있습니다ddddddddddddddddddddddddddddd</p>
                             <p class="meta">
                                 멤버 <span class="member-count">598</span> . 리더 <span class="leader">롯데사랑</span>
                             </p>
                             <a class="category-button" href="#"><span class="category">롯데자이언츠</span> 밴드 더보기</a>
                         </div>
                     </li>
+
+
+                    <li class="band-recommend">
+                        <a href="#" class="unit-link"></a>
+                        <figure>
+                            <img src="../image/롯데자이언츠.jpg" alt="롯데자이언츠">
+                        </figure>
+                        <div class="band-recommend-content">
+                            <h3><a href="#" class="link">롯데자이언츠 팬밴드</a></h3>
+                            <p>롯데 팬 모두가 이 밴드에 들어올 수 있습니다료</p>
+                            <p class="meta">
+                                멤버 <span class="member-count">598</span> . 리더 <span class="leader">롯데사랑</span>
+                            </p>
+                            <a class="category-button" href="#"><span class="category">롯데자이언츠</span> 밴드 더보기</a>
+                        </div>
+                    </li>
+
+
+
+                    <li class="band-recommend">
+                        <a href="#" class="unit-link"></a>
+                        <figure>
+                            <img src="../image/롯데자이언츠.jpg" alt="롯데자이언츠">
+                        </figure>
+                        <div class="band-recommend-content">
+                            <h3><a href="#" class="link">롯데자이언츠 팬밴드</a></h3>
+                            <p>롯데 팬 모두가 이 밴드에 들어올 수 있습니다요아료알ㅇ</p>
+                            <p class="meta">
+                                멤버 <span class="member-count">598</span> . 리더 <span class="leader">롯데사랑</span>
+                            </p>
+                            <a class="category-button" href="#"><span class="category">롯데자이언츠</span> 밴드 더보기</a>
+                        </div>
+                    </li>
+
+
+
+
                 </ul>
             </div>
         </div>
