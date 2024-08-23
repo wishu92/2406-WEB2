@@ -35,9 +35,9 @@
             margin-bottom: 16px;
         }
         .sticky-img {
-            /* position-sticky과 top은 세트? */
+            /* position-sticky하고 top에서 얼마나 떨어뜨릴건지 꼭 써주기 */
             position: sticky;
-            top: 0;
+            top: 0px;
             /* 그림의 높이를 100% 채우기, cover를 통해 빈 부분 없이 채우기 */
             height: 100vh;
             object-fit: cover;
@@ -48,6 +48,7 @@
     <section class="margin-section"></section>
 
     <div class="area">
+
         <figure>
             <img class="sticky-img" src="마멜.jpg" alt="졸린마이멜로디">
         </figure>
